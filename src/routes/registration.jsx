@@ -1,10 +1,15 @@
 import { Card, Stack, ToggleButtonGroup, Button } from "@mui/joy";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Registration = () => {
-  const [value, setValue] = useState("student register");
+  const [value, setValue] = useState("teacher");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate(value);
+  }, []);
+  
   return (
     <Stack sx={{ py: 10 }}>
       <Card
@@ -24,8 +29,10 @@ const Registration = () => {
           <Button value={"student"}>Student Register</Button>
           <Button value={"teacher"}>Teacher Register</Button>
         </ToggleButtonGroup>
-          <Outlet />
-          <Button color="primary" variant="solid">submit form</Button>
+        <Outlet />
+        <Button color="primary" variant="solid">
+          submit form
+        </Button>
       </Card>
     </Stack>
   );
