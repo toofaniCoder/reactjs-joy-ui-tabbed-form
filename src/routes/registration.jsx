@@ -9,7 +9,7 @@ const Registration = () => {
   useEffect(() => {
     navigate(value);
   }, []);
-  
+
   return (
     <Stack sx={{ py: 10 }}>
       <Card
@@ -29,7 +29,10 @@ const Registration = () => {
           <Button value={"student"}>Student Register</Button>
           <Button value={"teacher"}>Teacher Register</Button>
         </ToggleButtonGroup>
-        <Outlet />
+        <Stack sx={{ width: "100%" }} spacing={2}>
+          <Outlet />
+        </Stack>
+
         <Button fullWidth color="primary" variant="solid">
           submit form
         </Button>
