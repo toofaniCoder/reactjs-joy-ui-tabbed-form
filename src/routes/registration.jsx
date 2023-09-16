@@ -30,7 +30,7 @@ const Registration = () => {
           <Button value={"teacher"}>Teacher Register</Button>
         </ToggleButtonGroup>
         <Outlet />
-        <Button color="primary" variant="solid">
+        <Button fullWidth color="primary" variant="solid">
           submit form
         </Button>
       </Card>
