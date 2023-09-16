@@ -16,6 +16,7 @@ const theme = extendTheme({});
 import Layout from "./routes/layout";
 import Home from "./routes/home";
 import { CssBaseline, CssVarsProvider, GlobalStyles } from "@mui/joy";
+import Registration from "./routes/registration";
 
 // setup routing
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "registration",
+        element: <Registration />,
       },
     ],
   },
