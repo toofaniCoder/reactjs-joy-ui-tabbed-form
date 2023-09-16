@@ -17,6 +17,8 @@ import Layout from "./routes/layout";
 import Home from "./routes/home";
 import { CssBaseline, CssVarsProvider, GlobalStyles } from "@mui/joy";
 import Registration from "./routes/registration";
+import StudentRegistration from "./routes/stduent-registeration";
+import TeacherRegistration from "./routes/teacher-registration";
 
 // setup routing
 const router = createBrowserRouter([
@@ -31,6 +33,16 @@ const router = createBrowserRouter([
       {
         path: "registration",
         element: <Registration />,
+        children: [
+          {
+            path: "student",
+            element: <StudentRegistration />,
+          },
+          {
+            path: "teacher",
+            element: <TeacherRegistration />,
+          },
+        ],
       },
     ],
   },
